@@ -50,6 +50,10 @@ exports.HorizontalHeadersArea = areaItem.AreaItem.inherit({
             rowsCount = options.rowsCount,
             classArray = options.classArray;
 
+        if(cell.text.toString().indexOf('~HIDDEN~')!==-1){
+            classArray.push('hidden');
+        }
+        
         if(options.cellIndex === options.cellsCount - 1) {
             cssArray.push((options.rtlEnabled ? 'border-left:' : 'border-right:') + "0px");
         }

@@ -23,6 +23,8 @@ exports.DataArea = areaItem.AreaItem.inherit({
         var cell = options.cell,
             classArray = options.classArray;
 
+        cell.format.formatCell(options, classArray);
+
         if(cell.rowType === 'T' || cell.columnType === 'T') {
             classArray.push(PIVOTGRID_TOTAL_CLASS);
         }
